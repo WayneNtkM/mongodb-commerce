@@ -1,12 +1,11 @@
 db.produtos.updateMany({
-  nome: { $regex: 'Big Mac' }
+  nome: { $regex: "Big Mac" },
 }, {
-  $set: { ultimaModificacao: Date() }
+  $set: { ultimaModificacao: Date() },
 });
 
-
 db.produtos.find({
-  ultimaModificacao: { $exists: true }
+  ultimaModificacao: { $exists: true },
 }, {
-  _id: 0, nome: 1
+  _id: 0, nome: 1,
 });
